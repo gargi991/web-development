@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/surveyform.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container ">
+        <header class="header">
+            <h1 id="title">
+                <b>SURVEY FORM UNIQUEDU</b>
+            </h1>
+            <p id="description">
+                <h2><i>THANK YOU! for taking time to help us to improve the platform</i></h2>
+            </p>
+        </header>
+        <form action="{{url_for('txt')}}"  method="post" id="survey-form">
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name" class="form-label"><h2>First Name</h2></label>
+                <input type="text" name="first name" id="name" class="formControl" placeholder="Enter your first name" required>
+            </div>
+            <!-- end of text section -->
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name" class="form-label"><h2>Last Name</h2></label>
+                <input type="text" name="last name" id="name" class="formControl" placeholder="Enter your last name" required>
+            </div>
+            <!-- end of text section -->
+
+            <!-- Type Email section -->
+            <div class="form-group">
+                <label for="email" class="form-label"></label><h2>Email</h2></label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
+            </div>
+            <!-- end of Email section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="age" class="form-label"><h2>Age</h2></label>
+                <input type="number" name="age" id="age" class="formControl" placeholder="Enter your age" min="18" max="50" required>
+            </div>
+            <!-- end of Number section -->
+
+
+            <!-- select section -->
+            <div class="form-group">
+                <p id="quest"><h2>Your Category</h2></p>
+                <select name="role" required id="dropdown" class="formControl" style="color: white; background-color: rgb(51, 50, 50);">
+                    <option value disabled selected >Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="internr">Intern</option>
+                    <option value="trainee">Trainee</option>
+                    <option value="professional">Professional</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <!-- end of select section -->
+
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest"><h2>Do You Like UniquEdu ?</h2></p>
+                <label for="">
+                    <input type="radio" name="like" value="yes"
+                    class="inputRadio"
+                    > Yes
+                </label>
+                <label for="">
+                    <input type="radio" name="like" value="no"
+                    class="inputRadio"
+                    >No 
+                </label>
+            
+                <p id="quest"><h2>Would You Recommend UniquEdu To Anyone?</h2></p>
+                <label for="">
+                    <input type="radio" name="recommend" value="yes"
+                    class="inputRadio"
+                    > Yes
+                </label>
+                <label for="">
+                    <input type="radio" name="recommend" value="no"
+                    class="inputRadio"
+                    >No 
+                </label>
+                <label for="">
+                    <input type="radio" name="recommend" value="may be"
+                    class="inputRadio"
+                    >May Be
+                </label>
+            </div>
+            <!-- end of radio button -->
+
+            <!-- Checkbox section -->
+            <div class="form-group">
+                <p id="quest"><h2>What Are Your Choices Of Languages/Frameworks? </h2></p>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="html"> HTML
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="css"> CSS
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="javascript"> Javascript
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="django"> Django
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="python"> Python
+                </label>
+            </div>
+            <!-- End of checkbox section -->
+
+            <!-- Textarea section -->
+            <div class="form-group">
+                <p id="quest"><h2>Any Other Comments/Suggestions?</h2></p>
+                <textarea name="suggestions"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Enter your comments/suggestions here..." style="background-color: rgb(39, 38, 38); color: white;"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn"><b>Submit</b></button>
+            </div>
+            <div class="form-group">
+                <button type="reset" id="reset" class="btn"><b>Reset</b></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
